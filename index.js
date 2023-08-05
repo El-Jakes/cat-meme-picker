@@ -2,6 +2,10 @@ import { catsData } from "./catsData.js";
 
 const emotionsRadios = document.querySelector("#emotion-radios");
 
+emotionsRadios.addEventListener("change", (e) => {
+    console.log(document.getElementById(e.target.id))
+})
+
 const getEmotionsArray = (cats) => {
   const emotionsArray = [];
   for (let cat of cats) {
