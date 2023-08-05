@@ -4,6 +4,11 @@ const emotionsRadios = document.querySelector("#emotion-radios");
 
 
 const hightCheckedOption = (e) => {
+    const colorRemove = document.getElementsByClassName('radio')
+    for (let color of colorRemove) {
+        color.classList.remove('highlight')
+    }
+
     document.getElementById(e.target.id).parentElement.classList.add('highlight')
 }
 emotionsRadios.addEventListener("change", hightCheckedOption)
